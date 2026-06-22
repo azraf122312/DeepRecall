@@ -19,3 +19,7 @@ env/
 Thumbs.db
 .idea/
 .vscode/
+
+# Local DB artifacts (graph/ruflo tooling)
+ruvector.db
+*.db
