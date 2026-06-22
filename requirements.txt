@@ -1,0 +1,25 @@
+# DeepRecall runs with ZERO of these installed (pure-Python fallbacks).
+# Install any subset to upgrade the corresponding stage to production quality.
+
+# --- Dense embeddings + cross-encoder reranking (Step 4 / dense index) ---
+# sentence-transformers>=2.7.0
+
+# --- Real ANN vector stores (swap into indexing/dense.py) ---
+# chromadb>=0.5.0
+# pinecone-client>=4.0.0
+
+# --- Sparse / keyword backend (swap into indexing/sparse.py) ---
+# elasticsearch>=8.0.0
+
+# --- Relationship graph backend (swap into indexing/graph.py) ---
+# neo4j>=5.0.0
+
+# --- LLM generation (Step: generation) ---
+# anthropic>=0.40.0
+
+# --- Structural parsing of PDF/Word (extend ingestion/parser.py) ---
+# unstructured>=0.15.0
+# layoutparser
+
+# --- Dev ---
+# pytest>=8.0.0

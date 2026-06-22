@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deeprecall"
+version = "0.1.0"
+description = "Structure-aware, hybrid-retrieval RAG engine (Document Cognition Layer)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []   # core runs on the standard library alone
+
+[project.optional-dependencies]
+embeddings = ["sentence-transformers>=2.7.0"]
+llm = ["anthropic>=0.40.0"]
+stores = ["chromadb>=0.5.0", "neo4j>=5.0.0"]
+dev = ["pytest>=8.0.0"]
+
+[tool.setuptools.packages.find]
+include = ["deeprecall*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# OneDrive-synced folders block the pytest cache dir; disable it.
+addopts = "-p no:cacheprovider"
